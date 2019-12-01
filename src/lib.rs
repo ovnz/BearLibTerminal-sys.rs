@@ -294,6 +294,19 @@ pub fn print(x: i32, y: i32, value: &str) {
 	});
 }
 
+pub fn print_ext(x: i32, y: i32, w: i32, h: i32, align: i32, value: &str) {
+	assert!(x >= 0);
+	assert!(y >= 0);
+	
+	with_utf8_ptr(value, |ptr| {
+		unsafe {
+			let mut out_w = 0;
+			let mut out_h = 0;
+			terminal_print_ext8(x, y, w, h, align, ptr, &mut out_w, &mut out_h);
+		}
+	});
+}
+
 pub fn measure(value: &str) -> i32 {
 	with_utf8_ptr(value, |ptr|
 		unsafe {
