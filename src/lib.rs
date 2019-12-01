@@ -142,8 +142,8 @@ pub const TK_ALIGN_LEFT   : i32 = 1;
 pub const TK_ALIGN_RIGHT  : i32 = 2;
 pub const TK_ALIGN_CENTER : i32 = 3;
 pub const TK_ALIGN_TOP    : i32 = 4;
-pub const TK_ALIGN_BOTTOM : i32 = 5;
-pub const TK_ALIGN_MIDDLE : i32 = 6;
+pub const TK_ALIGN_BOTTOM : i32 = 8;
+pub const TK_ALIGN_MIDDLE : i32 = 12;
 
 pub type ColorT = u32;
 
